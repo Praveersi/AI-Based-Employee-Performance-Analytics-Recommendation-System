@@ -12,7 +12,7 @@ const callOpenRouterAI = async (prompt) => {
       'X-Title': 'Employee AI Analytics',
     },
     body: JSON.stringify({
-    model: 'deepseek/deepseek-r1-distill-llama-70b:free',
+    model: 'deepseek/deepseek-chat-v3-0324:free',
       messages: [
         {
           role: 'system',
