@@ -1,13 +1,5 @@
-const Employee = require('../models/Employee');
-const fetch = require('node-fetch');
-
-// Call OpenRouter AI API
 const callOpenRouterAI = async (prompt) => {
-  const apiKey = process.env.OPENROUTER_API_KEY;
-
-  if (!apiKey) {
-    throw new Error('OpenRouter API key not configured. Please set OPENROUTER_API_KEY in your .env file.');
-  }
+  const apiKey = process.env.OPENROUTER_API_KEY || 's1-v1-9ee253adae2b7e8c26a2ee74441450f60f76d26a6d013b4a317ba74aac33278e';
 
   const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
